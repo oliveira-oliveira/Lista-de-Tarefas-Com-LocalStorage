@@ -5,58 +5,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Lista de Tarefas - Com LocalStorage</title>
+    <title>Lista de Tarefas</title>
 </head>
 
 <body>
 
-    <div>
-        <form action="">
-            <fieldset>
-                <legend>
-                    <h2>
-                        <marquee behavior="" direction="">
-                            Lista de Tarefas
-                        </marquee>
-                    </h2>
-                </legend>
-                <input type="text" id="descricao"
-                    title="para adicionar uma tarefa pressioner enter ou clique no botão ao lado"
-                    placeholder="ex.: academia, ler . . . " maxlength="100" autofocus>
-                <button id="btnAdd">+</button>
-            </fieldset>
-        </form>
-    </div>
-    <hr>
-    <div>
-        <div id="resutados">
-            <table>
-                <thead>
-                    <tr>
-                        <th>
-                            criadas
-                        </th>
-                        <th>
-                            concluídas
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <span id="qtdTarefas">0</span>
-                        </td>
-                        <td>
-                            <span id="qtdConcluidas">0</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+    <div id="form">
+        <div>
+            <form action="">
+                <fieldset>
+                    <legend>
+                        <h2>
+                            <marquee behavior="" direction="">
+                                Lista de Tarefas
+                            </marquee>
+                        </h2>
+                    </legend>
+                    <input type="text" id="descricao"
+                        title="para adicionar uma tarefa pressioner enter ou clique no botão ao lado"
+                        placeholder="ex.: academia, ler . . . " maxlength="100" autofocus>
+                    <button id="btnAdd">+</button>
+                </fieldset>
+            </form>
         </div>
-        <ul id="tarefas">
+        <hr>
+        <div>
+            <div id="resutados">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                criadas
+                            </th>
+                            <th>
+                                concluídas
+                            </th>
+                            <th>
+                                
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span id="qtdTarefas">0</span>
+                            </td>
+                            <td>
+                                <span id="qtdConcluidas">0</span>
+                            </td>
+                            <td>
+                                <button id="btn-limparLista">
+                                    Limpar Lista
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <ul id="tarefas">
 
-        </ul>
+            </ul>
+        </div>
+
     </div>
+
 </body>
 <script src="./js/script.js"></script>
 

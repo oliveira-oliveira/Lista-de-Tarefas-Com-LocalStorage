@@ -6,7 +6,7 @@ const tarefas = document.getElementById('tarefas');
 const qtd = document.getElementById('concluidas')
 const dbLista = JSON.parse(localStorage.getItem('Tarefas')) || [];
 const btnAdd = document.getElementById('btnAdd');
-let id = 0;
+const btnExcluirTudo = document.getElementById('btn-limparLista');
 
 btnAdd.addEventListener('click', function (e) {
     e.preventDefault();
@@ -37,6 +37,18 @@ const salvandoLocalStorage = () => {
 
     localStorage.setItem('Tarefas', JSON.stringify(dbLista));
 }
+
+btnExcluirTudo.addEventListener('click', function(e){
+    e.preventDefault();
+
+    if (confirm('Tem certeza que deseja limpar a lista ?')) {
+
+        tarefas.innerHTML = "";
+        quantidadeTarefas();
+        quantidadeTarefasConcluidas();
+        localStorage.clear();
+    }
+})
 
 // RECUPERANDO DADOS DO LOCAL STORAGE
 const renderLocalStorage = () => {
