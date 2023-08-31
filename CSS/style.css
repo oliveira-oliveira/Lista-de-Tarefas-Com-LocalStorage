@@ -1,0 +1,105 @@
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+legend {
+    background-color: white;
+    border: 1px solid blueviolet;
+    border-radius: 3px;
+    width: 187px;
+}
+
+fieldset {
+    background-color: blueviolet;
+    border: 5px solid none;
+}
+
+#descricao {
+    font-size: 1.4rem;
+    border: 1px solid white;
+    height: 30px;
+    border-radius: 3px;
+}
+
+#btnAdd {
+    font-size: 1.7rem;
+    padding: 1px 9px;
+    background: transparent;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    margin-left: 2px;
+}
+
+#btnAdd:hover{
+    background: rgba(255, 255, 255, 0.842);
+    color: black;
+    transition: 1s;
+}
+
+.btn-action {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    width: 35px;
+    height: 35px;
+}
+
+.btn-action:hover {
+    background-color: white;
+    transition: 1.2s;
+}
+
+.tarefa {
+    font-size: 1.4rem;
+    font-weight: bold;
+    list-style-type: none;
+    padding: 7px 7px 7px 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: blueviolet;
+    max-width: 400px;
+    border-radius: 5px;
+    border-bottom: 2px solid white;
+    color: white;
+}
+
+.tarefa:hover {
+    background-color: rgba(137, 43, 226, 0.842);
+    transition: 1s;
+    
+}
+
+.concluida {
+    font-style: italic;
+    text-decoration: line-through;
+    text-decoration-thickness: 0.25rem;
+    text-decoration-color: black;
+}
+
+#resutados {
+    background-color: blueviolet;
+    
+}
+
+th {
+    color: white;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    padding: 5px;
+}
+ td {
+    padding-bottom: 10px;
+    text-align: center;
+ }
+
+#qtdTarefas, 
+#qtdConcluidas {
+    font-size: 1.2rem;
+    background-color: whitesmoke;
+    padding: 7px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
