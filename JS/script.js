@@ -44,9 +44,9 @@ btnExcluirTudo.addEventListener('click', function(e){
     if (confirm('Tem certeza que deseja limpar a lista ?')) {
 
         tarefas.innerHTML = "";
+        localStorage.clear();
         quantidadeTarefas();
         quantidadeTarefasConcluidas();
-        localStorage.clear();
     }
 })
 
@@ -73,9 +73,10 @@ renderLocalStorage();
 
 const quantidadeTarefas = () => {
 
-    qtdTarefas.innerText = dbLista.length;
+    const concluidas = document.querySelectorAll('.registro').length;
+    qtdTarefas.innerText = concluidas;
 }
-quantidadeTarefas();
+//quantidadeTarefas();
 
 const quantidadeTarefasConcluidas = () => {
 
@@ -111,12 +112,15 @@ const editar = li => {
 
     const registro = li.parentElement.parentElement.querySelector('.registro');
     const index = dbLista.indexOf(registro.textContent);
-    console.log(index)
 
     const novoRegistro = prompt('Editar a tarefa: ', registro.textContent);
+    
+    if (novoRegistro.length < 3) {
 
-    if (novoRegistro.length >= 3) {
+        alert('Alteração inválida');
+        console.error('Alteração inválida')
 
+    } else {
         if (confirm(`Confirma a alteração\nDe: ${registro.textContent}\nPara: ${novoRegistro} ?`)) {
 
             registro.textContent = novoRegistro;
@@ -125,8 +129,5 @@ const editar = li => {
             salvandoLocalStorage();
             renderLocalStorage();
         }
-    } else {
-        alert('Alteração inválida');
-        console.error('Alteração inválida')
     }
 }
